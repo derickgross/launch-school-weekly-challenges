@@ -32,7 +32,9 @@ class Luhn
   end
 
   def double_every_other
-    reversed_number_string.split("").map.with_index { |digit, index| index.even? ? digit * 2 : digit }.reverse.join
+    reversed_number_string.split("")
+      .map.with_index { |digit, index| index.even? ? digit * 2 : digit }
+      .reverse.join
   end
 
   def checksum

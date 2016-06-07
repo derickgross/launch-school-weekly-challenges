@@ -1,6 +1,5 @@
 require 'minitest/autorun'
-require 'minitest/reporters'
-Minitest::Reporters.use!
+require 'minitest/rg'
 require_relative 'crypto_square'
 
 class CryptoTest < Minitest::Test

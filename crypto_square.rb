@@ -1,5 +1,4 @@
 # crypto_square.rb
-require 'pry'
 
 class Crypto
   attr_reader :message

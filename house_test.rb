@@ -1,6 +1,7 @@
 # house_test.rb
 
 require 'minitest/autorun'
+require 'minitest/rg'
 require_relative 'house'
 
 # rubocop:disable Metrics/MethodLength
