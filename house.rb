@@ -20,7 +20,7 @@ class House
     counter = -1
     poems = []
 
-    12.times do
+    pieces.size.times do
       piece = break_pieces[counter..-1].join(" ")
       poems << "This is " + piece + ".\n"
       counter -= 1
@@ -36,7 +36,7 @@ class House
   end
 
   def break_pieces
-    map_join(send(:pieces), "\n")
+    map_join(pieces, "\n")
   end
 
   private

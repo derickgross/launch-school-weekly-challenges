@@ -1,4 +1,5 @@
 # crypto_square.rb
+require 'pry'
 
 class Crypto
   attr_reader :message
@@ -53,3 +54,6 @@ class Crypto
     cipher_segments.join(" ")
   end
 end
+
+crypty = Crypto.new("I shot the sheriff, but I did not shoot the deputy.")
+crypty.normalize_ciphertext
