@@ -46,7 +46,7 @@ class CircularBuffer
   def write(value)
     if value
       raise BufferFullException unless buffer_array[next_write_slot].empty?
-      buffer_array[next_write_slot] << value
+      buffer_array[next_write_slot] = [value]
       increment_write_buffer_slot
     end
   end
@@ -54,8 +54,7 @@ class CircularBuffer
   def write!(value)
     if value
       increment_read_buffer_slot unless buffer_array[next_write_slot].empty?
-      buffer_array[next_write_slot] = []
-      buffer_array[next_write_slot] << value
+      buffer_array[next_write_slot] = [value]
       increment_write_buffer_slot
     end
   end
